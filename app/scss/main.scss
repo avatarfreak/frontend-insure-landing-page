@@ -1,3 +1,6 @@
-@use "./abstracts/variables";
+@use "./abstracts";
 @use "./base";
 @use "./component";
+@use "./layout/header";
+@use "./pages/home";
+@use './layout/footer';

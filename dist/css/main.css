@@ -223,7 +223,7 @@ a {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("../../../images/bg-pattern-intro-left-mobile.svg");
+  background: url("./images/bg-pattern-intro-left-mobile.svg");
   background-repeat: no-repeat;
   pointer-events: none;
 }
@@ -236,11 +236,15 @@ a {
   transform: translateY(10rem);
   height: 100%;
   width: 100%;
-  background: url("../../../images/bg-pattern-intro-right-mobile.svg");
+  background: url("./images/bg-pattern-intro-right-mobile.svg");
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
   pointer-events: none;
+}
+
+.categories {
+  margin-top: 11.5rem;
 }
 
 /* - - - - - - - - Navigation- - - - - - - - -*/

@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+@use '../function' as *;
+
+/*---------- Humanizing Section ----------------*/
+
+.humanizing {
+  padding: to-rem(82) 1.5rem;
+  background: var(--clr-primary-110);
+  color: var(--clr-neutral-100);
+  position: relative;
+
+  &__wrapper {
+    z-index: 2;
+  }
+
+  &__title {
+    @include font-type-scale(
+      var(--fs-size-lg),
+      var(--ff-family-dm),
+      var(--fw-weight-regular),
+      null,
+      1
+    );
+  }
+
+  &__text {
+    @include font-type-scale(var(--fs-size-xs), var(--ff-family-karla), normal, 0.7, 1.62);
+    padding: 1rem 0;
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("./images/bg-pattern-intro-left-mobile.svg");
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: translateY(10rem);
+    height: 100%;
+    width: 100%;
+    background: url("./images/bg-pattern-intro-right-mobile.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    pointer-events: none;
+  }
+}

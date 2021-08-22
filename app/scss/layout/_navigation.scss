@@ -1,1 +1,10 @@
+@use '../abstracts' as *;
+
 /* - - - - - - - - Navigation- - - - - - - - -*/
+.menu {
+  position: relative;
+
+  &__list {
+    display: none;
+  }
+}

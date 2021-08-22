@@ -1,3 +1,5 @@
+@use '../function' as *;
+
 @mixin font-face($font-name, $path, $weight: normal, $style: normal) {
   @font-face {
     font-family: quote($font-name);
@@ -12,6 +14,15 @@
 @include font-face("DM Serif", "../fonts/DMSerifDisplay-Regular", 400, regular);
 
 //font size
+$xs-3: 13;
+$xs-2: 14;
+$xs: 16;
+$sm: 22;
+$md: 27;
+$lg: 39;
+$xl: 47;
+$xl-2: 55;
+$xl-3: 70;
 
 // font Weight
 $regular: 400;
@@ -23,7 +34,7 @@ $DM: "'DM Serif Display', serif";
 
 $fonts: (
   "font": (
-    property: "fly",
+    property: "family",
     class: "ff",
     "values": (
       "karla": $karla,
@@ -31,11 +42,26 @@ $fonts: (
     ),
   ),
   "weight": (
-    property: "wgt",
+    property: "weight",
     class: "fw",
     "values": (
       "regular": $regular,
       "bold": $bold,
+    ),
+  ),
+  "size": (
+    property: "size",
+    class: "fs",
+    "values": (
+      "3xs": to-rem($xs-3),
+      "2xs": to-rem($xs-2),
+      "xs": to-rem($xs),
+      "sm": to-rem($sm),
+      "md": to-rem($md),
+      "lg": to-rem($lg),
+      "xl": to-rem($xl),
+      "2xl": to-rem($xl-2),
+      "3xl": to-rem($xl-3),
     ),
   ),
 );

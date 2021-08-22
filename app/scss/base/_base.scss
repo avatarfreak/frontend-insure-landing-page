@@ -37,6 +37,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* A elements that don't have a class get default styles */
@@ -48,7 +49,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: inline-block;
+  display: block;
   height: auto;
 }
 
@@ -73,6 +74,16 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.wrapper {
+  max-width: 320px;
+  margin: auto;
+  outline: 1px solid black;
+}
+
+a {
+  text-decoration: none;
 }
 
 .attribution {
