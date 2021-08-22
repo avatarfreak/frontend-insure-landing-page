@@ -26,11 +26,12 @@
           <img src="./images/logo.svg" alt="insure">
         </div>
 
-        <button class="menu__toggler" aria-expanded="false" aria-labelledby="menu">
-          <span class="btn"></span>
-        </button>
         <!-- Navigation -->
-        <nav class="navigation menu" id="menu">
+        <nav class="navigation menu" class="menu">
+          <button class="menu-btn" aria-expanded="false" aria-label="show menu">
+            <span class="menu-btn__burger"></span>
+          </button>
+
           <ul class="menu__list">
             <li class="menu__item"><a href="#!" class="menu__link">How we work</a></li>
             <li class="menu__item"><a href="#!" class="menu__link">Blog</a></li>
@@ -49,12 +50,15 @@
         </picture>
 
         <!-- Heading Section -->
-        <section>
-          <h1> Humanizing your insurance.</h1>
-          <p>Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find
-            the plan that’s right for you. Ensure you and your loved ones are protected.</p>
-          <div class="hero__btn">
-            <a href="#!" class="hero__cta">View plans</a>
+        <section class="humanizing">
+          <div class="humanizing__wrapper">
+            <h1 class="humanizing__title"> Humanizing your insurance.</h1>
+            <p class="humanizing__text">Get your life insurance coverage easier and faster. We blend our expertise and
+              technology to help you find
+              the plan that’s right for you. Ensure you and your loved ones are protected.</p>
+            <div class="humanizing__btn">
+              <a href="#!" class="hero__cta outline-btn">View plans</a>
+            </div>
           </div>
         </section>
       </div>
