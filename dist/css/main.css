@@ -243,6 +243,7 @@ a {
   pointer-events: none;
 }
 
+/*--------------------Hero section-----------------*/
 .categories {
   margin: 10rem 1rem;
 }
@@ -283,6 +284,42 @@ a {
   font-weight: var(--fw-weight-bold);
   line-height: 1.6;
   color: var(--clr-neutral-110);
+}
+
+/*---------------Work Section ------------------------*/
+.work {
+  background-color: var(--clr-primary-110);
+  position: relative;
+  padding: 5rem 2.5rem;
+  margin-top: -4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.work::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  pointer-events: none;
+}
+.work__title {
+  color: var(--clr-neutral-100);
+  font-size: 2rem;
+  font-family: var(--ff-family-dm);
+  font-weight: var(--fw-weight-regular);
+  line-height: 1;
+}
+.work__cta {
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+.work__btn {
+  font-size: var(--fs-size-3xs);
 }
 
 /* - - - - - - - - Navigation- - - - - - - - -*/

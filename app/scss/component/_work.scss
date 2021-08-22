@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+@use '../function' as *;
+
+/*---------------Work Section ------------------------*/
+.work {
+  background-color: var(--clr-primary-110);
+  position: relative;
+  padding: 5rem 2.5rem;
+  margin-top: -4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../../images/bg-pattern-how-we-work-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    pointer-events: none;
+  }
+
+  &__title {
+    color: var(--clr-neutral-100);
+    @include font-type-scale(32, var(--ff-family-dm), var(--fw-weight-regular), null, 1);
+  }
+  &__cta {
+    display: inline-block;
+    margin-top: 2.5rem;
+  }
+
+  &__btn {
+    font-size: var(--fs-size-3xs);
+  }
+}
