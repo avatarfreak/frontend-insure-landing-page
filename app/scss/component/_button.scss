@@ -1,2 +1,72 @@
-.menu__toggler {
+@use '../abstracts/variables' as *;
+@use '../function' as *;
+
+/*---Menu Button---*/
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background: transparent;
+  border: 2px solid black;
+  width: to-rem(32px);
+  height: to-rem(32px);
+
+  &__burger {
+    position: absolute;
+    width: to-rem(20px);
+    height: to-rem(2.5px);
+    background: var(--clr-neutral-120);
+    border-radius: 5px;
+    transition: 0.5s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      background: var(--clr-neutral-120);
+      border-radius: 5px;
+      transition: 0.5s;
+      left: 0;
+    }
+
+    &::before {
+      transform: translateY(to-rem(-6px));
+    }
+    &::after {
+      transform: translateY(to-rem(6px));
+    }
+  }
+
+  & .active.menu-btn__burger {
+    background: transparent;
+    box-shadow: none;
+
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.outline-btn {
+  display: block;
+  height: to-rem(40px);
+  width: to-rem(144px);
+  border: 2px solid var(--clr-neutral-100);
+  color: var(--clr-neutral-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: var(--fs-size-xs);
+  font-weight: var(--fw-weight-bold);
+  font-family: var(--ff-family-karla);
+  letter-spacing: to-rem(0.5);
 }
