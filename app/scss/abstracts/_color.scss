@@ -1,0 +1,28 @@
+//Primary
+$pri-100: hsl(216, 30%, 68%);
+$pri-110: hsl(256, 26%, 20%);
+
+//neutral
+$neutral-100: hsl(0, 0%, 98%);
+$neutral-110: hsl(273, 4%, 51%);
+$neutral-120: hsl(270, 9%, 17%);
+
+$colors: (
+  "primary": (
+    property: primary,
+    class: clr,
+    "values": (
+      "100": $pri-100,
+      "110": $pri-110,
+    ),
+  ),
+  "neutral": (
+    property: neutral,
+    class: clr,
+    "values": (
+      "100": $neutral-100,
+      "110": $neutral-110,
+      "120": $neutral-120,
+    ),
+  ),
+);

@@ -1,0 +1,7 @@
+@use './' as *;
+@use './color' as *;
+@use './fonts' as *;
+
+:root {
+  @include custom-variables($colors, $fonts);
+}

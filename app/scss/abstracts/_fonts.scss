@@ -1,0 +1,41 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path + ".ttf");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face("karla", "../fonts/Karla-Regular", 400, regular);
+@include font-face("karla", "../fonts/Karla-Bold", 700, bold);
+@include font-face("DM Serif", "../fonts/DMSerifDisplay-Regular", 400, regular);
+
+//font size
+
+// font Weight
+$regular: 400;
+$bold: 700;
+
+//font Family
+$karla: "'Karla', sans-serif";
+$DM: "'DM Serif Display', serif";
+
+$fonts: (
+  "font": (
+    property: "fly",
+    class: "ff",
+    "values": (
+      "karla": $karla,
+      "dm": $DM,
+    ),
+  ),
+  "weight": (
+    property: "wgt",
+    class: "fw",
+    "values": (
+      "regular": $regular,
+      "bold": $bold,
+    ),
+  ),
+);
