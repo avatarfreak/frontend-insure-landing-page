@@ -9,9 +9,9 @@
   }
 }
 
-@include font-face("karla", "../fonts/Karla-Regular", 400, regular);
-@include font-face("karla", "../fonts/Karla-Bold", 700, bold);
-@include font-face("DM Serif", "../fonts/DMSerifDisplay-Regular", 400, regular);
+@include font-face("karla", "/fonts/Karla-Regular", 400, regular);
+@include font-face("karla", "/fonts/Karla-Bold", 700, bold);
+@include font-face("DM Serif", "/fonts/DMSerifDisplay-Regular", 400, regular);
 
 //font size
 $xs-3: 13;
