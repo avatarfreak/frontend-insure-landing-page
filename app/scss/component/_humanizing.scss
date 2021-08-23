@@ -21,6 +21,10 @@
       null,
       1
     );
+
+    @include mq("sm") {
+      font-size: var(--fs-size-xl);
+    }
   }
 
   &__text {

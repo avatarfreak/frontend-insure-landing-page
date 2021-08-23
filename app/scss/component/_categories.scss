@@ -2,6 +2,11 @@
 @use '../function' as *;
 
 /*--------------------Hero section-----------------*/
+.hero {
+  picture img {
+    width: 100%;
+  }
+}
 .categories {
   margin: to-rem(160px) 1rem;
 
@@ -13,6 +18,9 @@
       null,
       1
     );
+    @include mq("sm") {
+      font-size: var(--fs-size-xl);
+    }
     position: relative;
 
     &::before {
@@ -30,6 +38,10 @@
 
   & article {
     margin-top: to-rem(70px);
+
+    @include mq("sm") {
+      margin-top: to-rem(80px);
+    }
   }
 
   &__img {
@@ -55,6 +67,10 @@
       null,
       1.6
     );
+
+    @include mq("sm") {
+      font-weight: var(--fw-weight-regular);
+    }
     color: var(--clr-neutral-110);
   }
 }

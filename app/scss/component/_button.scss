@@ -10,7 +10,7 @@
   cursor: pointer;
   transition: 0.5s;
   background: transparent;
-  border: 2px solid black;
+  border: 2px solid var(--clr-neutral-120);
   width: to-rem(32px);
   height: to-rem(32px);
 
@@ -42,9 +42,17 @@
     }
   }
 
-  & .active.menu-btn__burger {
+  &:hover {
+    & .menu-btn__burger::after {
+      transform: translate(3px, 6px);
+    }
+    & .menu-btn__burger::before {
+      transform: translate(3px, -6px);
+    }
+  }
+
+  & .menu-btn__burger:not(.active) {
     background: transparent;
-    box-shadow: none;
 
     &::before {
       transform: rotate(45deg);

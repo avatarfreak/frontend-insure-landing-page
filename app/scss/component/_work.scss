@@ -10,6 +10,10 @@
   margin-left: 1rem;
   margin-right: 1rem;
 
+  @include mq("sm") {
+    margin-top: 0rem;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -26,6 +30,10 @@
   &__title {
     color: var(--clr-neutral-100);
     @include font-type-scale(32, var(--ff-family-dm), var(--fw-weight-regular), null, 1);
+
+    @include mq("sm") {
+      font-size: var(--fs-size-lg);
+    }
   }
   &__cta {
     display: inline-block;

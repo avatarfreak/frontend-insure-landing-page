@@ -75,9 +75,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
+*:focus-visible {
+  outline: 2px dashed red;
+}
 .wrapper {
-  max-width: 320px;
   margin: auto;
   outline: 1px solid black;
 }
