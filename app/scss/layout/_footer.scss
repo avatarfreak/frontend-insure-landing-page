@@ -1,1 +1,43 @@
+@use "../abstracts" as *;
+@use "../function" as *;
+
 /* - - - - - - - - Footer- - - - - - - - -*/
+
+.footer {
+  ul {
+    padding: 0;
+  }
+
+  &__top {
+    background: url("../../images/bg-pattern-footer-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateY(2.5rem);
+      margin: 1rem;
+      border-bottom: 1px solid var(--clr-neutral-120);
+    }
+  }
+
+  &__logo {
+    margin-top: to-rem(80px);
+    display: inline-block;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    padding: 0.5rem;
+  }
+}
