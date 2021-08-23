@@ -17,7 +17,7 @@ function scssTask() {
         content: ["*.html"],
       })
     )
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("dist/css", { sourcemaps: "." }));
 }
 
