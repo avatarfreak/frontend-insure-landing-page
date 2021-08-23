@@ -1,10 +1,64 @@
 @use '../abstracts' as *;
+@use '../function' as *;
 
 /* - - - - - - - - Navigation- - - - - - - - -*/
-.menu {
+.header__navbar {
   position: relative;
+}
 
+.menu {
   &__list {
-    display: none;
+    background: var(--clr-neutral-120);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 3rem);
+    z-index: 1;
+    padding: to-rem(56) 2rem 0 2rem;
+
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-110%, 4rem);
+
+    &:not(.active) {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0%, 4rem);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url("../../../images/bg-pattern-mobile-nav.svg") no-repeat;
+      pointer-events: none;
+      background-position: bottom;
+      background-size: contain;
+    }
+  }
+
+  &__item {
+    padding: 1rem 0;
+  }
+  &__link {
+    @include font-type-scale(
+      var(--fs-size-sm),
+      var(--ff-family-karla),
+      var(--fw-weight-bold),
+      0.15px
+    );
+    color: var(--clr-neutral-100);
+    text-transform: uppercase;
+  }
+
+  &__cta {
+    display: inline-flex;
+    width: 100%;
+    height: to-rem(64);
   }
 }
