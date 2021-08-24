@@ -2,9 +2,7 @@
 @use '../function' as *;
 
 /* - - - - - - - - Navigation- - - - - - - - -*/
-.header__navbar {
-  position: relative;
-}
+
 .menu-btn {
   @include mq("768px") {
     display: none;

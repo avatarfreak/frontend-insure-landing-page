@@ -1,3 +1,4 @@
+@use '../abstracts' as *;
 @use './navigation';
 
 /* - - - - - - - - Header- - - - - - - - -*/
@@ -6,4 +7,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
+  position: relative;
+
+  @include mq("xl") {
+    padding: 1.5rem 5rem;
+  }
 }
