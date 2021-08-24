@@ -13,6 +13,11 @@
       @include mq("xl") {
         width: unset;
       }
+
+      @include mq("2xl") {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
 
     @include mq("768px") {
@@ -28,6 +33,12 @@
       width: unset;
       margin-right: 5rem;
       margin-top: 2rem;
+    }
+
+    @include mq("2xl") {
+      width: unset;
+      margin-right: 10rem;
+      margin-top: to-rem(104);
     }
   }
 
@@ -61,6 +72,12 @@
         margin-left: 5rem;
       }
 
+      @include mq("2xl") {
+        margin-left: 10rem;
+        width: to-rem(485);
+        margin-bottom: to-rem(10);
+        margin-top: to-rem(104);
+      }
       &::before {
         content: "";
         position: absolute;
@@ -73,6 +90,10 @@
 
         @include mq("xl") {
           width: 20%;
+        }
+
+        @include mq("2xl") {
+          width: 35%;
         }
       }
     }
@@ -91,8 +112,12 @@
       font-size: var(--fs-size-xl);
     }
 
-    @include mq("sm") {
-      font-size: var(--fs-size-xl);
+    @include mq("lg") {
+      font-size: var(--fs-size-2xl);
+    }
+
+    @include mq("2xl") {
+      font-size: var(--fs-size-3xl);
     }
   }
 
@@ -105,6 +130,13 @@
     display: inline-block;
     margin-top: 1rem;
     cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      background: var(--clr-neutral-100);
+      a {
+        color: var(--clr-neutral-120);
+      }
+    }
   }
 
   &::before {
@@ -147,8 +179,8 @@
       background-position-x: left;
       background-position-y: bottom;
       background-repeat: no-repeat;
-      transform: translateY(16rem);
-      background-size: 12%;
+      transform: translateY(23rem);
+      pointer-events: none;
     }
   }
 }

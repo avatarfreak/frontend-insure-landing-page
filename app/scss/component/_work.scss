@@ -26,6 +26,10 @@
     padding: 5rem;
   }
 
+  @include mq("2xl") {
+    margin: 0 10rem;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -42,6 +46,7 @@
       background: url(../../images/bg-pattern-how-we-work-desktop.svg);
       background-repeat: no-repeat;
       background-position: right;
+      background-size: contain;
     }
   }
 

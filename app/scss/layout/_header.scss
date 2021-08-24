@@ -12,4 +12,8 @@
   @include mq("xl") {
     padding: 1.5rem 5rem;
   }
+
+  @include mq("2xl") {
+    padding: 1.5rem 10rem;
+  }
 }

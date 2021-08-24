@@ -14,6 +14,10 @@
     margin: to-rem(218px) 5rem 10rem;
   }
 
+  @include mq("2xl") {
+    margin: to-rem(365px) 10rem 10rem;
+  }
+
   & h2 {
     @include font-type-scale(
       var(--fs-size-lg),
@@ -29,6 +33,10 @@
 
     @include mq("lg") {
       text-align: left;
+    }
+
+    @include mq("2xl") {
+      font-size: var(--fs-size-3xl);
     }
 
     &::before {
@@ -50,6 +58,9 @@
       @include mq("xl") {
         width: 10%;
         transform: translate(0%, -2.5rem);
+      }
+      @include mq("2xl") {
+        width: 14%;
       }
     }
   }
@@ -107,6 +118,9 @@
       &:not(:last-child) {
         margin-right: 3rem;
       }
+    }
+    @include mq("2xl") {
+      margin-top: to-rem(100px);
     }
   }
 
