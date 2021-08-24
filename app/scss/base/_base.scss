@@ -78,7 +78,9 @@ select {
 *:focus-visible {
   outline: 2px dashed red;
 }
+
 .wrapper {
+  // max-width: 768px;
   margin: auto;
   outline: 1px solid black;
 }

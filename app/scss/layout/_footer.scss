@@ -16,6 +16,13 @@
     background-size: cover;
     position: relative;
 
+    @include mq("768px") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5rem;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -27,6 +34,7 @@
       margin: 1rem;
       border-bottom: 1px solid var(--clr-neutral-110);
       opacity: 0.5;
+      pointer-events: none;
 
       @include mq("sm") {
         transform: translateY(3rem);
@@ -41,8 +49,12 @@
     @include mq("sm") {
       margin-top: to-rem(90px);
     }
+    @include mq("sm") {
+      margin-top: 0;
+    }
   }
 
+  /*----------Social Icon -------------------*/
   &__list {
     display: flex;
     justify-content: center;
@@ -50,6 +62,11 @@
   }
   &__item {
     padding: 0.5rem;
+  }
+  &__link img {
+    &:hover {
+      filter: brightness(0);
+    }
   }
 
   /*------------------Footer Bottom Section ------------------*/
@@ -60,6 +77,12 @@
     @include mq("sm") {
       margin-top: 3rem;
       margin-bottom: 5rem;
+    }
+
+    @include mq("md") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 0;
     }
 
     &-title {
@@ -89,6 +112,13 @@
       text-transform: uppercase;
       padding: 0.5rem 0;
       color: var(--clr-neutral-120);
+
+      @include mq("768px") {
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: var(--clr-neutral-120);
+        }
+      }
     }
   }
 }

@@ -1,15 +1,16 @@
 @use '../abstracts' as *;
 @use '../function' as *;
 
-/*--------------------Hero section-----------------*/
-.hero {
-  picture img {
-    width: 100%;
-  }
-}
+/*--------------------Categories Section-----------------*/
+
 .categories {
   margin: to-rem(160px) 1rem;
 
+  .different__wrapper {
+    @include mq("768px") {
+      margin: 0 5rem;
+    }
+  }
   & h2 {
     @include font-type-scale(
       var(--fs-size-lg),

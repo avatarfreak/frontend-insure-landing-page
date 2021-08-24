@@ -1,5 +1,31 @@
 @use '../abstracts' as *;
 @use '../function' as *;
+/*--------------------Hero section-----------------*/
+.hero {
+  picture {
+    img {
+      width: 100%;
+
+      @include mq("768px") {
+        width: 384px;
+        height: 462px;
+      }
+    }
+
+    @include mq("768px") {
+      z-index: 1;
+      position: absolute;
+      right: 0;
+      top: 3rem;
+      width: 50%;
+      margin-right: 1.5rem;
+    }
+  }
+
+  @include mq("768px") {
+    position: relative;
+  }
+}
 
 /*---------- Humanizing Section ----------------*/
 
@@ -11,6 +37,23 @@
 
   &__wrapper {
     z-index: 2;
+    position: relative;
+
+    @include mq("768px") {
+      text-align: left;
+      width: calc(50% - 2rem);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 30%;
+        border-top: 2px solid var(--clr-neutral-110);
+        margin-top: to-rem(-40);
+      }
+    }
   }
 
   &__title {
@@ -21,6 +64,10 @@
       null,
       1
     );
+
+    @include mq("sm") {
+      font-size: var(--fs-size-xl);
+    }
 
     @include mq("sm") {
       font-size: var(--fs-size-xl);
