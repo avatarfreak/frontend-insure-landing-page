@@ -60,7 +60,6 @@
   }
 
   &__wrapper {
-    z-index: 2;
     position: relative;
 
     @include mq("768px") {
@@ -77,6 +76,10 @@
         width: to-rem(485);
         margin-bottom: to-rem(10);
         margin-top: to-rem(104);
+      }
+
+      @include mq("3xl") {
+        margin-bottom: 2.5rem;
       }
       &::before {
         content: "";
@@ -124,6 +127,10 @@
   &__text {
     @include font-type-scale(var(--fs-size-xs), var(--ff-family-karla), normal, 0.7, 1.62);
     padding: 1rem 0;
+
+    @include mq("3xl") {
+      font-size: to-rem(18);
+    }
   }
 
   &__btn {
@@ -136,6 +143,12 @@
       a {
         color: var(--clr-neutral-120);
       }
+    }
+  }
+
+  .hero__cta {
+    @include mq("3xl") {
+      font-size: to-rem(18);
     }
   }
 

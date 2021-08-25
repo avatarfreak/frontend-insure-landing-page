@@ -152,9 +152,14 @@
       1.6
     );
 
+    color: var(--clr-neutral-110);
+
     @include mq("sm") {
       font-weight: var(--fw-weight-regular);
     }
-    color: var(--clr-neutral-110);
+
+    @include mq("3xl") {
+      font-size: to-rem(18);
+    }
   }
 }

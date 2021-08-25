@@ -10,6 +10,8 @@
 }
 
 .menu {
+  z-index: 2;
+
   &__list {
     background: var(--clr-neutral-120);
     position: absolute;
@@ -71,9 +73,11 @@
 
   &__item {
     padding: 1rem 0;
+  }
 
+  &__item:not(:last-child) {
     @include mq("768px") {
-      padding: 0;
+      padding-left: 1rem;
     }
   }
 

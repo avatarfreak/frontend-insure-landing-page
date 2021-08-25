@@ -9,6 +9,7 @@
   margin-top: -4rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  z-index: 2;
 
   @include mq("sm") {
     margin-top: 0rem;
@@ -41,6 +42,7 @@
     background-repeat: no-repeat;
     background-position: top right;
     pointer-events: none;
+    z-index: -1;
 
     @include mq("xl") {
       background: url(../../images/bg-pattern-how-we-work-desktop.svg);
@@ -90,6 +92,11 @@
       font-size: var(--fs-size-2xs);
       padding: 0.5rem;
       width: to-rem(152px);
+    }
+
+    @include mq("3xl") {
+      font-size: to-rem(18px);
+      width: 11rem;
     }
   }
 }
