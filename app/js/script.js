@@ -35,3 +35,13 @@ const lastChild = links.pop();
 lastChild.addEventListener("blur", () => {
   toggleBtn.focus();
 });
+
+//stop animation on Window Resize
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-animate-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-animate-stopper");
+  });
+});
