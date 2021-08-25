@@ -38,6 +38,10 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   text-align: center;
+
+  &.resize-animate-stopper * {
+    transition: none !important;
+  }
 }
 
 /* A elements that don't have a class get default styles */
