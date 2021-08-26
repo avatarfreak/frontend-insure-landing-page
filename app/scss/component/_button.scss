@@ -42,12 +42,14 @@
     }
   }
 
-  &:hover {
-    & .menu-btn__burger::after {
-      transform: translate(3px, 6px);
-    }
-    & .menu-btn__burger::before {
-      transform: translate(3px, -6px);
+  @media (hover: hover) {
+    &:hover {
+      & .menu-btn__burger::after {
+        transform: translate(3px, 6px);
+      }
+      & .menu-btn__burger::before {
+        transform: translate(3px, -6px);
+      }
     }
   }
 
